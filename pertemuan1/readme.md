@@ -1,9 +1,10 @@
-# Penjelasan Program Stack dalam Python
+# Penjelasan Program Stack dan Queue dalam Python
 
+## 1. Implementasi Stack di Python
 Program ini menunjukkan cara kerja struktur data Stack (tumpukan) menggunakan list di Python.
 Stack mengikuti konsep LIFO (Last In, First Out), yaitu elemen terakhir yang masuk akan menjadi elemen pertama yang keluar.
 
-## Kode Program
+### Kode Program
 
 ```python
 # # stack and stack operations
@@ -31,7 +32,7 @@ print("isEmpty: ", isEmpty)
 print("Size: ", len(stack))
 ```
 
-## Penjelasan Kode Program
+### Penjelasan Kode Program
 
 1. **Membuat Stack**
 
@@ -83,11 +84,105 @@ print("Size: ", len(stack))
    
    len(stack) mengembalikan jumlah elemen stack.
 
-## 🧩 Hasil Eksekusi
+### Hasil Eksekusi Kode Program
 
 ```
 Stack:  ['A', 'B', 'C']
 Pop:  C
+Peek:  B
+isEmpty:  False
+Size:  2
+```
+
+## 2. Implementasi Queue di Python
+Program ini menunjukkan cara membuat dan menggunakan Queue (antrian) menggunakan list di Python.
+Queue mengikuti prinsip FIFO (First In, First Out), yaitu elemen yang pertama masuk akan menjadi elemen pertama yang keluar.
+
+### Kode Program
+
+```python
+# Creating queue and Queue Operations
+queue = []
+
+# Enqueue
+queue.append('A')
+queue.append('B')
+queue.append('C')
+print("Queue: ", queue)
+
+# Dequeue
+element = queue.pop(0)
+print("Dequeue: ", element)
+
+# Peek
+frontElement = queue[0]
+print("Peek: ", frontElement)
+
+# isEmpty
+isEmpty = not bool(queue)
+print("isEmpty: ", isEmpty)
+
+# Size
+print("Size: ", len(queue))
+```
+
+### Penjelasan Kode Program
+
+1. **Membuat Queue**
+
+   ```python
+   queue = []
+   ```
+
+   Membuat sebuah list kosong bernama queue untuk menampung elemen-elemen.
+
+2. **Enqueue (Menambahkan Elemen ke Antrian)**
+
+   ```python
+    queue.append('A')
+    queue.append('B')
+    queue.append('C')
+   ```
+
+   append() digunakan untuk menambahkan elemen di belakang antrian.
+
+3. **Dequeue (Mengeluarkan Elemen Depan Antrian)**
+
+   ```python
+    element = queue.pop(0)
+   ```
+
+   pop(0) mengambil dan menghapus elemen paling depan dari queue.
+
+4. **Peek (Melihat Elemen Depan Tanpa Menghapus)**
+
+   ```python
+   frontElement = queue[0]
+   ```
+   
+   queue[0] mengambil elemen terdepan tanpa menghapusnya.
+
+5. **Cek Apakah Queue Kosong (isEmpty)**
+
+   ```python
+   isEmpty = not bool(queue)
+   ```
+   
+   Mengecek apakah queue masih memiliki elemen.
+
+6. **Size (Mengetahui Ukuran Queue)**
+
+   ```python
+   len(queue)
+   ```
+   
+   len(queue) menghitung jumlah elemen dalam queue.
+
+### Hasil Eksekusi Kode Program
+
+```
+Queue:  ['A', 'B', 'C']
+Dequeue:  A
 Peek:  B
 isEmpty:  False
 Size:  2
